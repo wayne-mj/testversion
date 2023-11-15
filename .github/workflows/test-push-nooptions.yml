@@ -14,7 +14,6 @@ jobs:
 
       - name: Get Version from Tag
         id: getversion
-        #uses: warpkez/getversion@v1.2
         uses: wayne-mj/getversion@main
         #
         #
