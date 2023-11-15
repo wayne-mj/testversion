@@ -1,0 +1,25 @@
+name: Push Test no options
+
+on:
+  push:
+    tags:
+      - 'v*' # Run only when a tag is pushed with a version format like 'v1.0.0'
+
+jobs:
+  get-version-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get Version from Tag
+        id: getversion
+        #uses: warpkez/getversion@v1.2
+        uses: warpkez/get-version@v1.1
+        #
+        #
+
+      #- name: Use rel_version in workflow
+      #  run: echo "The extracted rel_version is ${{ steps.getversion.outputs.rel_version }}"
+      - name: Use release_version in workflow
+        run: echo "The extracted release_version is ${{ steps.getversion.outputs.release_version }}"
