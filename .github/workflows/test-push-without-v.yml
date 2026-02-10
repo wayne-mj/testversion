@@ -14,7 +14,7 @@ jobs:
 
       - name: Get Version from Tag
         id: getversion
-        uses: wayne-mj/getversion@v1.5
+        uses: wayne-mj/getversion@v1.6
         with:
             version-format: 'without-v'
 
